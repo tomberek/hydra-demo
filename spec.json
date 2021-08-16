@@ -10,5 +10,17 @@
         "enableemail": false,
         "emailoverride": "",
         "keepnr": 10
+    },
+    "demo_jobset_branch1":{
+        "enabled": 1,
+        "hidden": false,
+        "description": "demo jobsets for branch1",
+        "type":1,
+        "flake":"github:tomberek/hydra-demo/branch1",
+        "checkinterval": 10,
+        "schedulingshares": 100,
+        "enableemail": false,
+        "emailoverride": "",
+        "keepnr": 10
     }
 }
