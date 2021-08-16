@@ -1,0 +1,14 @@
+{
+    "demo_jobset":{
+        "enabled": 1,
+        "hidden": false,
+        "description": "demo jobsets",
+        "type":1,
+        "flake":"github:tomberek/hydra-demo",
+        "checkinterval": 10,
+        "schedulingshares": 100,
+        "enableemail": false,
+        "emailoverride": "",
+        "keepnr": 10
+    }
+}
