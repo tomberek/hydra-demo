@@ -1,7 +1,7 @@
 {
   "enabled": 1,
   "hidden": false,
-  "description": "demo jobsets for branch1",
+  "description": "declarative spec",
   "inputs": {
     "nixpkgs": {
       "emailresponsible": false,
