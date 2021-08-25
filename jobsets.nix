@@ -8,7 +8,7 @@ let
       toJobset = { url, ref }: {
         checkinterval = 100;
         emailoverride = "";
-        enabled = true;
+        enabled = 1;
         enableemail = false;
         hidden = false;
         type = 1;
