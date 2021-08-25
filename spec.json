@@ -22,5 +22,26 @@
         "enableemail": false,
         "emailoverride": "",
         "keepnr": 10
+    },
+    "demo_PRs":{
+        "enabled": 1,
+        "hidden": false,
+        "description": "demo jobsets for branch1",
+        "type":0,
+        "inputs": {
+            "pull-requests": {
+              "emailresponsible": false,
+              "type": "githubpulls",
+              "value": "https://tomberek hydra-demo"
+            }
+        },
+        "nixexprinput":"pull-requests",
+        "nixeprpath":"jobsets.nix",
+
+        "checkinterval": 10,
+        "schedulingshares": 100,
+        "enableemail": false,
+        "emailoverride": "",
+        "keepnr": 10
     }
 }
