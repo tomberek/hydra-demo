@@ -2,6 +2,7 @@
   "enabled": 1,
   "hidden": false,
   "description": "declarative spec",
+  "type": 0,
   "inputs": {
     "nixpkgs": {
       "emailresponsible": false,
