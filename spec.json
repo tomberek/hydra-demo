@@ -1,30 +1,27 @@
 {
-  "enabled": 1,
-  "hidden": false,
-  "description": "declarative spec",
-  "type": 0,
-  "inputs": {
-    "nixpkgs": {
-      "emailresponsible": false,
-      "type": "git",
-      "value": "https://github.com/NixOS/nixpkgs.git nixos-unstable"
-    },
-    "pull-requests": {
-      "emailresponsible": false,
-      "type": "githubpulls",
-      "value": "tomberek hydra-demo"
-    },
-    "hydra-demo": {
-      "emailresponsible": false,
-      "type": "git",
-      "value": "https://github.com/tomberek/hydra-demo master"
-    }
+  "branch2": {
+    "checkinterval": 100,
+    "description": "branch 2",
+    "emailoverride": "",
+    "enabled": 1,
+    "enableemail": false,
+    "flake": "github:tomberek/hydra-demo/branch2",
+    "hidden": false,
+    "keepnr": 10,
+    "schedulingshares": 100,
+    "type": 1
   },
-  "nixexprinput": "hydra-demo",
-  "nixexprpath": "jobsets.nix",
-  "checkinterval": 300,
-  "schedulingshares": 100,
-  "enableemail": false,
-  "emailoverride": "",
-  "keepnr": 10
+  "master": {
+    "checkinterval": 100,
+    "description": "branch master",
+    "emailoverride": "",
+    "enabled": 1,
+    "enableemail": false,
+    "flake": "github:tomberek/hydra-demo",
+    "hidden": false,
+    "keepnr": 10,
+    "schedulingshares": 100,
+    "type": 1
+  }
 }
+
