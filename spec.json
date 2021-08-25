@@ -1,47 +1,29 @@
 {
-    "demo_jobset":{
-        "enabled": 1,
-        "hidden": false,
-        "description": "demo jobsets",
-        "type":1,
-        "flake":"github:tomberek/hydra-demo",
-        "checkinterval": 10,
-        "schedulingshares": 100,
-        "enableemail": false,
-        "emailoverride": "",
-        "keepnr": 10
+  "enabled": 1,
+  "hidden": false,
+  "description": "demo jobsets for branch1",
+  "inputs": {
+    "nixpkgs": {
+      "emailresponsible": false,
+      "type": "git",
+      "value": "https://github.com/NixOS/nixpkgs.git nixos-unstable"
     },
-    "demo_jobset_branch1":{
-        "enabled": 1,
-        "hidden": false,
-        "description": "demo jobsets for branch1",
-        "type":1,
-        "flake":"github:tomberek/hydra-demo/branch1",
-        "checkinterval": 10,
-        "schedulingshares": 100,
-        "enableemail": false,
-        "emailoverride": "",
-        "keepnr": 10
+    "pull-requests": {
+      "emailresponsible": false,
+      "type": "githubpulls",
+      "value": "tomberek hydra-demo"
     },
-    "demo_PRs":{
-        "enabled": 1,
-        "hidden": false,
-        "description": "demo jobsets for branch1",
-        "type":0,
-        "inputs": {
-            "pull-requests": {
-              "emailresponsible": false,
-              "type": "githubpulls",
-              "value": "https://tomberek hydra-demo"
-            }
-        },
-        "nixexprinput":"pull-requests",
-        "nixeprpath":"jobsets.nix",
-
-        "checkinterval": 10,
-        "schedulingshares": 100,
-        "enableemail": false,
-        "emailoverride": "",
-        "keepnr": 10
+    "hydra-demo": {
+      "emailresponsible": false,
+      "type": "git",
+      "value": "https://github.com/tomberek/hydra-demo master"
     }
+  },
+  "nixexprinput": "hydra-demo",
+  "nixexprpath": "jobsets.nix",
+  "checkinterval": 300,
+  "schedulingshares": 100,
+  "enableemail": false,
+  "emailoverride": "",
+  "keepnr": 10
 }
