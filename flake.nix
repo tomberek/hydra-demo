@@ -14,6 +14,7 @@
     hydraJobs."tester" = self.defaultPackage;
     hydraJobs."tester-readme" = pkgs.runCommand "readme" {} ''
       mkdir -p $out/nix-support
+      echo hello to logs
       echo "# A readme" > $out/readme.md
       echo "doc readme $out/readme.md" >> $out/nix-support/hydra-build-products
       '';
