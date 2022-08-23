@@ -34,6 +34,16 @@ let
 
   desc = prJobsets // {
     "master" = mkFlakeJobset "master";
+  } // {
+    runCommandHook = {
+      recurseForDerivations = true;
+
+        example = pkgs.writeScript "run-me" ''
+          #!${pkgs.runtimeShell}
+
+          ${pkgs.jq}/bin/jq . "$HYDRA_JSON"
+        '';
+    };
   };
 
   log = {
