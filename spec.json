@@ -9,7 +9,7 @@
       "type": "git",
       "value": "https://github.com/NixOS/nixpkgs.git nixos-unstable"
     },
-    "pull-requests": {
+    "pulls": {
       "emailresponsible": false,
       "type": "githubpulls",
       "value": "tomberek hydra-demo"
@@ -17,7 +17,7 @@
     "hydra-demo": {
       "emailresponsible": false,
       "type": "git",
-      "value": "https://github.com/tomberek/hydra-demo master"
+      "value": "https://github.com/tomberek/hydra-demo generative"
     }
   },
   "nixexprinput": "hydra-demo",
