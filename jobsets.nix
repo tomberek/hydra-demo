@@ -36,6 +36,7 @@ let
 
   desc = prJobsets // {
     "master" = mkFlakeJobset "master";
+    "generative" = mkFlakeJobset "generative";
   };
 
   log = {
