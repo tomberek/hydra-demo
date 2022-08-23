@@ -18,5 +18,13 @@
         echo "# A readme" > $out/readme.md
         echo "doc readme $out/readme.md" >> $out/nix-support/hydra-build-products
       '';
+      hydraJobs.runCommandHook = {
+        recurseForDerivations = true;
+        example = with nixpkgs.legacyPackages.x86_64-linux; pkgs.writeScript "run-me" ''
+          #!${pkgs.runtimeShell}
+
+          ${pkgs.jq}/bin/jq . "$HYDRA_JSON"
+        '';
+      };
     };
 }

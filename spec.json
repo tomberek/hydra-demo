@@ -19,7 +19,7 @@
   "nixexprpath": "jobsets.nix",
   "checkinterval": 300,
   "schedulingshares": 100,
-  "enableemail": false,
+  "enableemail": true,
   "emailoverride": "tom@example.com",
   "keepnr": 10,
   "enable_dynamic_run_command": true

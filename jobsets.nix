@@ -11,7 +11,7 @@ let
       description = "PR ${num}: ${info.title}";
       checkinterval = 120;
       schedulingshares = 20;
-      enableemail = false;
+      enableemail = true;
       emailoverride = "tom@example.com";
       keepnr = 1;
       type = 1;
@@ -25,7 +25,7 @@ let
     checkinterval = 600;
     enabled = 1;
     schedulingshares = 100;
-    enableemail = false;
+    enableemail = true;
     emailoverride = "tom@example.com";
     keepnr = 3;
     hidden = false;
@@ -36,16 +36,6 @@ let
 
   desc = prJobsets // {
     "master" = mkFlakeJobset "master";
-  } // {
-    runCommandHook = {
-      recurseForDerivations = true;
-
-        example = pkgs.writeScript "run-me" ''
-          #!${pkgs.runtimeShell}
-
-          ${pkgs.jq}/bin/jq . "$HYDRA_JSON"
-        '';
-    };
   };
 
   log = {
