@@ -4,11 +4,6 @@
   "description": "declarative spec",
   "type": 0,
   "inputs": {
-    "nixpkgs": {
-      "emailresponsible": false,
-      "type": "git",
-      "value": "https://github.com/NixOS/nixpkgs.git nixos-unstable"
-    },
     "pulls": {
       "emailresponsible": false,
       "type": "githubpulls",
