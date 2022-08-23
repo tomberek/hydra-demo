@@ -7,7 +7,7 @@ let
     name = "PR-${num}";
     value = {
       enabled = 1;
-      hidden = true;
+      hidden = false;
       description = "PR ${num}: ${info.title}";
       checkinterval = 120;
       schedulingshares = 20;
@@ -21,8 +21,8 @@ let
   ) prs;
   mkFlakeJobset = branch: {
     description = "Hydra demo - ${branch}";
-    checkinterval = "600";
-    enabled = "1";
+    checkinterval = 600;
+    enabled = 1;
     schedulingshares = 100;
     enableemail = false;
     emailoverride = "";
