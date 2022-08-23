@@ -16,6 +16,7 @@ let
       keepnr = 1;
       type = 1;
       flake = "github:tomberek/hydra-demo/${info.head.ref}";
+      enable_dynamic_run_command = true;
     };
   }
   ) prs;
@@ -30,6 +31,7 @@ let
     hidden = false;
     type = 1;
     flake = "github:tomberek/hydra-demo/${branch}";
+    enable_dynamic_run_command = true;
   };
 
   desc = prJobsets // {
