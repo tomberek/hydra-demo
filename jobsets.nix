@@ -12,7 +12,7 @@ let
       checkinterval = 120;
       schedulingshares = 20;
       enableemail = false;
-      emailoverride = "";
+      emailoverride = "tom@example.com";
       keepnr = 1;
       type = 1;
       flake = "github:tomberek/hydra-demo/${info.head.ref}";
@@ -26,7 +26,7 @@ let
     enabled = 1;
     schedulingshares = 100;
     enableemail = false;
-    emailoverride = "";
+    emailoverride = "tom@example.com";
     keepnr = 3;
     hidden = false;
     type = 1;
